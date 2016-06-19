@@ -8,6 +8,8 @@ $.fn.extend({
 });
 
 window.onload = function () {
+  $('#internetBanner').removeClass('hidden');
+  $('#internetButton').removeClass('hidden');
   $('#internetBanner').animateCss('fadeInUp');
   $('#internetButton').animateCss('fadeInUp');
 }
