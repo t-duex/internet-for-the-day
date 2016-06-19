@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'BannerFont';
+  src: url('fonts/ribbons-and-banners-webfont.woff2') format('woff2'),
+       url('fonts/ribbons-and-banners-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ButtonFont';
+  src: url('fonts/market_deco-webfont.woff2') format('woff2'),
+       url('fonts/market_deco-webfont.woff') format('woff');
+}
+
+.banner {
+  font-family: 'BannerFont';
+  text-align: center;
+  font-size: 1000%;
+}
+
+.internetButtonWrapper {
+  text-align: center;
+  padding-top: 80pt;
+}
+
+.transparent {
+  background: rgba(255,255,255,0);
+}
+
+#internetButton {
+  background: rgba(255,255,255,0);
+  border-color: black;
+  border-width: 2pt;
+  font-family: 'ButtonFont';
+  animation-duration: 2s;
+}
+
+#internetButton:hover {
+  background: rgba(0,0,0,0.2);
+  animation-duration: 1s;
+}
+
+#internetButton:active {
+  background: rgba(0,0,0,0.3);
+}
+
+#internetBanner {
+  animation-duration: 2s;
+}
+
+html {
+  background-image: url('../pics/catTransparent70.jpg');
+  height: 100%;
+}
