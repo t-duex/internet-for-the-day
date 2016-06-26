@@ -40,7 +40,7 @@ function extractYoutubeLinks(data) {
 }
 
 function extractLinkFromMediaContent(mediaContent) {
-  if (mediaContent != null) {
+  if (mediaContent != null && mediaContent.indexOf('youtu') > -1) { // check for youtube.com or youtu.be
     return mediaContent.split("/embed/")[1].split("?")[0];
   }
   return null;
