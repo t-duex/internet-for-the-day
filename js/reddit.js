@@ -41,7 +41,10 @@ function extractYoutubeLinks(data) {
 
 function extractLinkFromMediaContent(mediaContent) {
   if (mediaContent != null && mediaContent.indexOf('youtu') > -1) { // check for youtube.com or youtu.be
-    return mediaContent.split("/embed/")[1].split("?")[0];
+    var firstSplit = mediaContent.split("/embed/");
+    if (firstSplit[1] != null) {
+      return firstSplit.split("?")[0];
+    }
   }
   return null;
 }
