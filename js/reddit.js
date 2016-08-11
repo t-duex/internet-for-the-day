@@ -1,7 +1,11 @@
 var getYoutubeLinks = function() {
-  $.get("https://www.reddit.com/r/youtubehaiku.json").done(function (data) {
+  $.get("https://www.reddit.com/r/youtubehaiku.json")
+  .done(function (data) {
     var linkList = extractYoutubeLinks(data);
     $("#videoPlayer").html(constructVideoString(linkList));
+  })
+  .fail(function() {
+    alert("There was an error retrieving your internet for the day. Please try again later."); 
   });
 }
 
