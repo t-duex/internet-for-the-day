@@ -21,6 +21,11 @@
   padding-top: 80pt;
 }
 
+.internetCheckboxWrapper {
+  text-align: center;
+  padding-top: 20pt;
+}
+
 .transparent {
   background: rgba(255,255,255,0);
 }
@@ -44,6 +49,22 @@
 
 #internetButton:active {
   background: rgba(0,0,0,0.3);
+}
+
+#internetCheckbox {
+  background: rgba(255,255,255,0);
+  width: 14pt;
+  height: 14pt;
+  border-color: black;
+  border-width: 2pt;
+  font-family: 'ButtonFont';
+  animation-duration: 2s;
+}
+
+#internetLabel {
+  font-family: 'ButtonFont';
+  font-size: 14pt;
+  animation-duration: 2s;
 }
 
 #internetBanner {
