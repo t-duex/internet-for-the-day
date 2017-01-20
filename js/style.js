@@ -18,32 +18,17 @@ $.fn.extend({
 });
 
 window.onload = function () {
-  $('#internetBanner').removeClass('hidden');
-  $('#internetButton').removeClass('hidden');
-  $('#internetLabel').removeClass('hidden');
-  $('#internetCheckbox').removeClass('hidden');
-  $('#internetBanner').animateCss('fadeInUp');
-  $('#internetButton').animateCss('fadeInUp');
-  $('#internetLabel').animateCss('fadeInUp');
-  $('#internetCheckbox').animateCss('fadeInUp');
+  $('.faded').removeClass('hidden');
+  $('.faded').animateCss('fadeInUp');
 }
 
 window.onfocus = function () {
-  $('#internetBanner').animateCss('fadeInUp');
-  $('#internetButton').animateCss('fadeInUp');
-  $('#internetLabel').animateCss('fadeInUp');
-  $('#internetCheckbox').animateCss('fadeInUp');
-  $('#internetBanner').show();
-  $('#internetButton').show();
-  $('#internetLabel').show();
-  $('#internetCheckbox').show();
+  $('.faded').animateCss('fadeInUp');
+  $('.faded').show();
 }
 
 window.onblur = function () {
-  $('#internetBanner').hide();
-  $('#internetButton').hide();
-  $('#internetLabel').hide();
-  $('#internetCheckbox').hide();
+  $('.faded').hide();
 }
 
 $('#internetButton').mouseenter(function () {
