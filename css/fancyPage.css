@@ -73,4 +73,5 @@
 html {
   background-image: url('../pics/catTransparent70.jpg');
   height: 100%;
+  background-size: cover;
 }
