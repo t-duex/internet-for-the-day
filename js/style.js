@@ -7,25 +7,30 @@ $.fn.extend({
     }
 });
 
+$.fn.extend({
+    animateCssWithCallback: function (animationName, callback) {
+        var animationEnd = 'animationend';
+        $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+            callback();
+        });
+    }
+});
+
 window.onload = function () {
-  $('#internetBanner').removeClass('hidden');
-  $('#internetButton').removeClass('hidden');
-  $('#internetBanner').animateCss('fadeInUp');
-  $('#internetButton').animateCss('fadeInUp');
+  $('.faded').removeClass('hidden');
+  $('.faded').animateCss('fadeInUp');
 }
 
 window.onfocus = function () {
-  $('#internetBanner').animateCss('fadeInUp');
-  $('#internetButton').animateCss('fadeInUp');
-  $('#internetBanner').show();
-  $('#internetButton').show();
+  $('.faded').animateCss('fadeInUp');
+  $('.faded').show();
 }
 
 window.onblur = function () {
-  $('#internetBanner').hide();
-  $('#internetButton').hide();
+  $('.faded').hide();
 }
 
 $('#internetButton').mouseenter(function () {
-  $('#internetButton').animateCss('bounce');
-})
+  $('#internetButton').animateCss('pulse');
+});
