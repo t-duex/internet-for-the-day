@@ -3,7 +3,16 @@ var getYoutubeLinks = function() {
   $.get("https://www.reddit.com/r/youtubehaiku.json")
   .done(function (data) {
     var linkList = extractYoutubeLinks(data);
-    $("#videoPlayer").html(constructVideoString(linkList));
+    if ($("#internetCheckbox").prop("checked") == true)
+    {
+      $.get("https://www.reddit.com/r/youtubehaiku.json?count=25&after=" + data.data.after).done(function (data) {
+        var linkListExtended = extractYoutubeLinks(data);
+        linkList = linkList.concat(linkListExtended);
+        $("#videoPlayer").html(constructVideoString(linkList));
+      });
+    } else {
+      $("#videoPlayer").html(constructVideoString(linkList));
+    }
   })
   .fail(function() {
     alert("There was an error retrieving your internet for the day. Please try again later."); 
